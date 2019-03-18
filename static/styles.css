@@ -1,0 +1,340 @@
+html, body
+{
+    height: 100%;
+    background:#eff9ff;
+}
+nav
+{
+    background: -webkit-linear-gradient(top, #a1dbff 0%,#cbebff 53%,#eff9ff 100%);
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.nav-link, #navbarDropdown
+{
+    color:#5f6170;
+}
+
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+form
+{
+    margin-top: 100px;
+}
+
+.main-field
+{
+    overflow-x:auto;
+    text-align: center;
+    margin: auto;
+    height: 80%;
+    width: 90%
+}
+
+
+.column
+{
+
+    margin-top: 1%;
+    margin-left: .5rem;
+    border-radius: .6rem;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.05);
+    overflow-y: hidden;
+    height: 95%;
+    width: 23%;
+    display:inline-block;
+}
+
+.c_row
+{
+    height: auto;
+    margin: .2rem;
+    width: auto;
+    font-size: 0.9rem;
+    background:white;
+
+
+}
+
+.stage1
+{
+    height: 4.5%;
+    border-radius: .6rem .6rem 0 0
+
+
+}
+
+.stage2
+{
+    height: 40%;
+    overflow-y: auto;
+}
+
+.stage3
+{
+    text-align: left;
+    padding-top:1px;
+    padding-left:10px;
+    margin-bottom:3%;
+    height: 5%;
+    border-radius: 0 0 .6rem .6rem
+}
+
+.stage4
+{
+    height: 41%;
+    overflow-y: auto;
+    border-radius: .6rem .6rem 0 0
+}
+
+.stage5
+{
+    height: 5%;
+    padding-top:1px;
+    padding-left:10px;
+    text-align: left;
+    border-radius: 0 0 .6rem .6rem
+}
+
+.table
+{
+    margin:0;
+    width: 100%;
+}
+
+thead
+{
+    width:5%;
+}
+
+th
+{
+    text-align:left;
+}
+
+th[name="td_2"]
+{
+    width:22%;
+}
+
+td[name="td_1"]
+{
+    text-align: left;
+    width: auto;
+}
+
+td[name="td_2"]
+{
+    width:22%;
+    padding-right:0;
+    text-align: left;
+}
+.wraper
+{
+    display:table;
+    width:100%;
+}
+.symbol
+{
+    display:table-cell;
+    width: .5rem;
+}
+
+.edit
+{
+    display:table-cell;
+
+}
+
+.button_block
+{
+    width:20px;
+}
+
+.add-button
+{
+    display:inline-block;
+    margin:0;
+    width:25%;
+    text-align:center;
+
+}
+
+.sum
+{
+    display:inline-block;
+    margin:0;
+    width:70%;
+}
+
+.sum_down
+{
+    display:inline-block;
+    margin:0;
+    width:40%;
+}
+
+.total
+{
+    display:inline-block;
+    text-align: right;
+    padding-right:5%;
+    width:58%;
+}
+
+div .dropdown-menu
+{
+    max-height: 180px;
+    overflow-y: auto;
+    background:#eff9ff;
+    border-radius: .5rem
+}
+
+
+main img
+{
+    max-width: 100%;
+}
+
+
+.btn-circle
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left:5px;
+    padding: 0;
+    line-height: 12px;
+    font-size: 16px;
+}
+
+.btn-outline-danger
+{
+    font-size: 18px;
+    line-height:0px;
+    text-align:center;
+    vertical-align:central;
+    padding-bottom:2px;
+    padding-left:.1px
+}
+
+.btn-success
+{
+    width: 80%;
+    height: 20px;
+    padding:0;
+    font-size: 12px;
+}
+
+input
+{
+    width: 100%;
+    font-size: 16px;
+
+    display: block;
+    border: none;
+    background: #ccedff4f;
+    border-radius: .3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+
+.top-cover
+{
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.alert
+{
+    margin:auto;
+    margin-top:10%;
+    width:40%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+tr:hover td {background:#e2f5ff}
+
+
+/*style scroll-bar*/
+::-webkit-scrollbar{
+    width:6px;
+
+}
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #00b0ff;
+    background-color: #dbf1ff;
+}
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #b8e4ff;
+}
+::-webkit-scrollbar-track{
+    border-width:0;
+}
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #eff9ff61;
+}
+
+
+@media screen and (max-width: 650px) {
+    .main-field
+    {
+        width:380px;
+        /*overflow-x:auto;*/
+        white-space:nowrap
+    }
+
+    .column
+    {
+        width: 375px;
+    }
+
+    nav .navbar-brand
+    {
+        /* size for brand */
+        font-size: large;
+    }
+}

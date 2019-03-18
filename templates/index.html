@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Display
+{% endblock %}
+
+{% block main %}
+
+{% for table in tables %}
+
+        <div class="column" name="{{table[0]['num_table']}}">
+            <div class="c_row stage1">
+                {{tab_names[table[0]['num_table']-1]}}
+            </div>
+
+            <div class="c_row stage2">
+                <table class="table table-hover table-sm mx-auto" id="table{{table[0]['num_table']}}">
+                    <thead>
+                        <tr>
+                            <th name="td_1" colspan=3>Comment</th>
+                            <th name="td_2">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if table[0]['item_id'] %}
+                            {% for dict in table %}
+                                {% if dict["completed"] == 'false' %}
+                                    <tr id={{ dict['item_id'] }}>
+                                            <td class="button_block">
+                                                <button type="button" name="done" class="btn btn-outline-info btn-circle">✓</button>
+                                            </td>
+                                            <td name="td_1"class="first">
+                                                <div class="edit" contenteditable>{{ dict['comment'] }}</div>
+                                            </td>
+                                            <td class="button_block">
+                                                <button type="button" name="del_item" class="btn btn-outline-danger btn-circle">×</button>
+                                            </td>
+                                            <td name="td_2" class="second">
+                                                <div class="wraper">
+                                                    <div class="symbol">₴</div>
+                                                    <div class="edit" contenteditable>{{ dict['i_cash'] }}</div>
+                                                </div>
+                                            </td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="c_row stage3">
+                <div class="sum">
+                    Sum:
+                    <output name="up"></output>
+                </div>
+                <div class="add-button">
+                    <button type="button" id="new_row{{table[0]['num_table']}}" class="btn btn-success">Add</button>
+
+                </div>
+            </div>
+
+
+            <div class="c_row stage4">
+                <table class="table table-hover table-sm mx-auto" id="table{{table[0]['num_table']+4}}"> <!--class="table table-striped"-->
+                    <thead>
+                        <tr>
+                            <th name="td_1" colspan=3>Comment</th>
+                            <th name="td_2">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if table[0]['item_id'] %}
+                            {% for dict in table %}
+                                {% if dict["completed"] == 'true' %}
+                                    <tr id={{ dict['item_id'] }}>
+                                        <td class="button_block">
+                                            <button type="button" name="done" class="btn btn-outline-info btn-circle">✓</button>
+                                        </td>
+                                        <td name="td_1"class="first">
+                                            <div class="edit" contenteditable>{{ dict['comment'] }}</div>
+                                        </td>
+                                        <td class="button_block">
+                                            <button type="button" name="del_item" class="btn btn-outline-danger btn-circle">×</button>
+                                        </td>
+                                        <td name="td_2" class="second">
+                                            <div class="wraper">
+                                                <div class="symbol">₴</div>
+                                                <div class="edit" contenteditable>{{ dict['i_cash'] }}</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="c_row stage5">
+                <div class="sum_down">
+                    Sum:
+                    <output name="down"></output>
+                </div>
+                <div class="total">
+                    Total:
+                    <output name="total"></output>
+                </div>
+            </div>
+
+
+        </div>
+
+{% endfor %}
+
+{% endblock %}
